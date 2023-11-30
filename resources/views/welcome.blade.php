@@ -46,15 +46,21 @@
                 <th>Telefono</th>
                 <th>Direccion</th>
             </tr>
-{{--             <p>{{$listadoUsers}}</p> --}}
 
+            @foreach ($infoUsers as $item)
+                <tr>
+                    <th>{{$item->id}}</th>
+                    <th>{{$item->nombre}}</th>
+                    <th>{{$item->cedula}}</th>
+                    <th>{{$item->telefono}}</th>
+                    <th>{{$item->direccion}}</th>
+                </tr>
+            @endforeach
 
         </table>
 
 
-
-        {{-- <p>{{ $usuario}}</p> --}}
-
+        <h1 class=" mt-20 bg-blue-200">Eliminar usuarios</h1>
 
  
 

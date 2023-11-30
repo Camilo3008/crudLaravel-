@@ -16,12 +16,16 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', function () {
+
+
+
+/* Route::get('/', function () {
     return view('/welcome');
-});
+});  */
 
-Route::post('/', [RegisterController::class, 'store', 'show']); 
-//Route::get('/', [RegisterController::class, 'show']); 
+Route::get('/', [RegisterController::class, 'index']); 
 
+Route::post('/', [RegisterController::class, 'store']); 
 
-//hacer el index y dentro del index poner  lo que esta en la funcion show 
+//Route::delete('/', [RegisterController::class, 'destroy']); 
+

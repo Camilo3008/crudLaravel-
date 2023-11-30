@@ -9,6 +9,13 @@ use App\Models\Usuario;
 class RegisterController extends Controller
 {
 
+    public function index(){
+
+        $infoUsers=Usuario::all(); 
+
+        return View('welcome', compact('infoUsers')); 
+    }
+
     //funcion para guardar datos en la base de datos
 
     public function store(Request $request){
@@ -32,18 +39,4 @@ class RegisterController extends Controller
     }
 
 
-        //Funcion para buscar por id o cedula.  
-
-        public function show(){
-            $usuario=usuario::all();
-    
-            $listadoUsers= "   Holaaaaaaaaaaa ";       
-    
-            return $listadoUsers; 
-        }
-
-        
-
-
- 
 }
